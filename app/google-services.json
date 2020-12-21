@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "779839672975",
+    "firebase_url": "https://newotp-19d53.firebaseio.com",
+    "project_id": "newotp-19d53",
+    "storage_bucket": "newotp-19d53.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779839672975:android:4f8a04741a89b361ef96fa",
+        "android_client_info": {
+          "package_name": "com.hammadkhan950.newotp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "779839672975-l9ociltjd2dljcqqg45416dqs6e4572f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvOyet-gTfHdwViI4wY5IAT9uNZqgZt5I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "779839672975-l9ociltjd2dljcqqg45416dqs6e4572f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

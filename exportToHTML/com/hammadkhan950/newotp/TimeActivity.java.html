@@ -1,0 +1,161 @@
+<html>
+<head>
+<title>TimeActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #0033b3;}
+.s1 { color: #080808;}
+.s2 { color: #1750eb;}
+.s3 { color: #067d17;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+TimeActivity.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.hammadkhan950.newotp;</span>
+
+<span class="s0">import </span><span class="s1">androidx.appcompat.app.AppCompatActivity;</span>
+<span class="s0">import </span><span class="s1">androidx.cardview.widget.CardView;</span>
+
+<span class="s0">import </span><span class="s1">android.content.Intent;</span>
+<span class="s0">import </span><span class="s1">android.os.Bundle;</span>
+<span class="s0">import </span><span class="s1">android.view.View;</span>
+<span class="s0">import </span><span class="s1">android.widget.Button;</span>
+
+<span class="s0">public class </span><span class="s1">TimeActivity </span><span class="s0">extends </span><span class="s1">AppCompatActivity </span><span class="s0">implements </span><span class="s1">View.OnClickListener {</span>
+
+    <span class="s1">CardView at61, at62, at63, at64, at71, at72, at73, at74, at81, at82, at83, at84, at91, at92, at93, at94;</span>
+    <span class="s1">CardView[] myCards = </span><span class="s0">new </span><span class="s1">CardView[</span><span class="s2">16</span><span class="s1">];</span>
+    <span class="s1">Button nextButton;</span>
+    <span class="s1">String time, date, category, details;</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) {</span>
+        <span class="s0">super</span><span class="s1">.onCreate(savedInstanceState);</span>
+        <span class="s1">setContentView(R.layout.activity_time);</span>
+        <span class="s1">Intent intent = getIntent();</span>
+        <span class="s1">date = intent.getStringExtra(</span><span class="s3">&quot;date&quot;</span><span class="s1">);</span>
+        <span class="s1">category = intent.getStringExtra(</span><span class="s3">&quot;category&quot;</span><span class="s1">);</span>
+        <span class="s1">details = intent.getStringExtra(</span><span class="s3">&quot;details&quot;</span><span class="s1">);</span>
+
+        <span class="s1">nextButton = findViewById(R.id.nextButton);</span>
+        <span class="s1">at61 = findViewById(R.id.at61);</span>
+        <span class="s1">at62 = findViewById(R.id.at62);</span>
+        <span class="s1">at63 = findViewById(R.id.at63);</span>
+        <span class="s1">at64 = findViewById(R.id.at64);</span>
+        <span class="s1">at71 = findViewById(R.id.at71);</span>
+        <span class="s1">at72 = findViewById(R.id.at72);</span>
+        <span class="s1">at73 = findViewById(R.id.at73);</span>
+        <span class="s1">at74 = findViewById(R.id.at74);</span>
+        <span class="s1">at81 = findViewById(R.id.at81);</span>
+        <span class="s1">at82 = findViewById(R.id.at82);</span>
+        <span class="s1">at83 = findViewById(R.id.at83);</span>
+        <span class="s1">at84 = findViewById(R.id.at84);</span>
+        <span class="s1">at91 = findViewById(R.id.at91);</span>
+        <span class="s1">at92 = findViewById(R.id.at92);</span>
+        <span class="s1">at93 = findViewById(R.id.at93);</span>
+        <span class="s1">at94 = findViewById(R.id.at94);</span>
+        <span class="s1">at61.setOnClickListener(</span><span class="s0">this</span><span class="s1">);</span>
+        <span class="s1">at62.setOnClickListener(</span><span class="s0">this</span><span class="s1">);</span>
+        <span class="s1">at63.setOnClickListener(</span><span class="s0">this</span><span class="s1">);</span>
+        <span class="s1">at64.setOnClickListener(</span><span class="s0">this</span><span class="s1">);</span>
+        <span class="s1">at71.setOnClickListener(</span><span class="s0">this</span><span class="s1">);</span>
+        <span class="s1">at72.setOnClickListener(</span><span class="s0">this</span><span class="s1">);</span>
+        <span class="s1">at63.setOnClickListener(</span><span class="s0">this</span><span class="s1">);</span>
+        <span class="s1">at64.setOnClickListener(</span><span class="s0">this</span><span class="s1">);</span>
+        <span class="s1">at71.setOnClickListener(</span><span class="s0">this</span><span class="s1">);</span>
+        <span class="s1">at72.setOnClickListener(</span><span class="s0">this</span><span class="s1">);</span>
+        <span class="s1">at73.setOnClickListener(</span><span class="s0">this</span><span class="s1">);</span>
+        <span class="s1">at74.setOnClickListener(</span><span class="s0">this</span><span class="s1">);</span>
+        <span class="s1">at81.setOnClickListener(</span><span class="s0">this</span><span class="s1">);</span>
+        <span class="s1">at82.setOnClickListener(</span><span class="s0">this</span><span class="s1">);</span>
+        <span class="s1">at83.setOnClickListener(</span><span class="s0">this</span><span class="s1">);</span>
+        <span class="s1">at84.setOnClickListener(</span><span class="s0">this</span><span class="s1">);</span>
+        <span class="s1">at91.setOnClickListener(</span><span class="s0">this</span><span class="s1">);</span>
+        <span class="s1">at92.setOnClickListener(</span><span class="s0">this</span><span class="s1">);</span>
+        <span class="s1">at93.setOnClickListener(</span><span class="s0">this</span><span class="s1">);</span>
+        <span class="s1">at94.setOnClickListener(</span><span class="s0">this</span><span class="s1">);</span>
+        <span class="s1">nextButton.setOnClickListener(</span><span class="s0">this</span><span class="s1">);</span>
+
+        <span class="s1">myCards = </span><span class="s0">new </span><span class="s1">CardView[]{at61, at62, at63, at64, at71, at72, at73, at74, at81, at82, at83, at84, at91, at92, at93, at94};</span>
+    <span class="s1">}</span>
+
+
+    <span class="s0">public void </span><span class="s1">cardSelector(CardView view, String str) {</span>
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">j = </span><span class="s2">0</span><span class="s1">; j &lt; </span><span class="s2">16</span><span class="s1">; j++) {</span>
+            <span class="s0">if </span><span class="s1">(myCards[j].toString().equals(view.toString())) {</span>
+                <span class="s1">myCards[j].setCardBackgroundColor(getResources().getColor(R.color.teal_700));</span>
+                <span class="s1">time = str;</span>
+            <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                <span class="s1">myCards[j].setCardBackgroundColor(getResources().getColor(R.color.teal_200));</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+
+    <span class="s1">@Override</span>
+    <span class="s0">public void </span><span class="s1">onClick(View view) {</span>
+        <span class="s0">if </span><span class="s1">(view.getId() == R.id.nextButton) {</span>
+            <span class="s1">Intent intent = </span><span class="s0">new </span><span class="s1">Intent(</span><span class="s0">this</span><span class="s1">, ConfirmActivity.</span><span class="s0">class</span><span class="s1">);</span>
+            <span class="s1">intent.putExtra(</span><span class="s3">&quot;date&quot;</span><span class="s1">, date);</span>
+            <span class="s1">intent.putExtra(</span><span class="s3">&quot;time&quot;</span><span class="s1">, time);</span>
+            <span class="s1">intent.putExtra(</span><span class="s3">&quot;category&quot;</span><span class="s1">, category);</span>
+            <span class="s1">intent.putExtra(</span><span class="s3">&quot;details&quot;</span><span class="s1">, details);</span>
+            <span class="s1">startActivity(intent);</span>
+
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(view.getId() == R.id.at61) {</span>
+            <span class="s1">cardSelector(at61, </span><span class="s3">&quot; 6:00&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(view.getId() == R.id.at62) {</span>
+            <span class="s1">cardSelector(at62, </span><span class="s3">&quot; 6:15&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(view.getId() == R.id.at63) {</span>
+            <span class="s1">cardSelector(at63, </span><span class="s3">&quot; 6:30&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(view.getId() == R.id.at64) {</span>
+            <span class="s1">cardSelector(at64, </span><span class="s3">&quot; 6:45&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(view.getId() == R.id.at71) {</span>
+            <span class="s1">cardSelector(at71, </span><span class="s3">&quot; 7:00&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(view.getId() == R.id.at72) {</span>
+            <span class="s1">cardSelector(at72, </span><span class="s3">&quot; 7:15&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(view.getId() == R.id.at73) {</span>
+            <span class="s1">cardSelector(at73, </span><span class="s3">&quot; 7:30&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(view.getId() == R.id.at74) {</span>
+            <span class="s1">cardSelector(at74, </span><span class="s3">&quot; 7:45&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(view.getId() == R.id.at81) {</span>
+            <span class="s1">cardSelector(at81, </span><span class="s3">&quot; 8:00&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(view.getId() == R.id.at82) {</span>
+            <span class="s1">cardSelector(at82, </span><span class="s3">&quot; 8:15&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(view.getId() == R.id.at83) {</span>
+            <span class="s1">cardSelector(at83, </span><span class="s3">&quot; 8:30&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(view.getId() == R.id.at84) {</span>
+            <span class="s1">cardSelector(at84, </span><span class="s3">&quot; 8:45&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(view.getId() == R.id.at91) {</span>
+            <span class="s1">cardSelector(at91, </span><span class="s3">&quot; 9:00&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(view.getId() == R.id.at92) {</span>
+            <span class="s1">cardSelector(at92, </span><span class="s3">&quot; 9:15&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(view.getId() == R.id.at93) {</span>
+            <span class="s1">cardSelector(at93, </span><span class="s3">&quot; 9:30&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(view.getId() == R.id.at94) {</span>
+            <span class="s1">cardSelector(at94, </span><span class="s3">&quot; 9:45&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>

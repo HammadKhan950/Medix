@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".activity.SplashActivity">
+
+    <TextView
+        android:id="@+id/txtAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:fontFamily="@font/orator"
+        android:text="Medix"
+        android:textColor="#385963"
+        android:textSize="36sp"/>
+
+    <ImageView
+        android:id="@+id/imgSplashLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtAppName"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/doctorlogo"/>
+
+    <com.agrawalsuneet.loaderspack.loaders.PulseLoader
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        app:pulse_LineThickness="2.5dp"
+        app:pulse_normalIncrementalValue="5.5"
+        app:pulse_pulseColor="#9E0808"
+        app:pulse_pulseIncrementalValue="30.0"
+        app:pulse_sideLength="95dp" />
+
+
+</RelativeLayout>
